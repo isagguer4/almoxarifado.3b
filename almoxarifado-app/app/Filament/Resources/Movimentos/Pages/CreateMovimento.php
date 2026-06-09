@@ -11,6 +11,15 @@ use Filament\Notifications\Notification;
 class CreateMovimento extends CreateRecord
 {
     protected static string $resource = MovimentoResource::class;
+    /**
+     * O que o beforeCreate faz?
+     * ......
+     * 
+     * @param $data - recebe uma lista de produtos
+     * @param $produto - recebe o id do produto (a ser selecionado pelo usuário) na tela de Movimentos
+     * @param $quantidade - recebe o valor do campo quantidade de $produto anteriormente selecionado
+     * @param $tipo - recebe o valor do campo tipo $produto anteriormente selecionado
+     */
 
     protected function beforeCreate(): void 
     {
